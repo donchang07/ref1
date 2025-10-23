@@ -5,3 +5,4 @@ langchain-community
 langchain-openai
 pypdf
 faiss-cpu
+langchain-text-splitters
