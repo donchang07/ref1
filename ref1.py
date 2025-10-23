@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import tempfile
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_community.vectorstores import FAISS
 
@@ -376,3 +376,4 @@ if prompt := st.chat_input("질문을 입력하세요"):
                 with st.chat_message("assistant"):
                     st.write(f"오류가 발생했습니다: {str(e)}")
                 st.session_state.chat_history.append({"role": "assistant", "content": f"오류가 발생했습니다: {str(e)}"})
+
